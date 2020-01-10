@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,700&display=swap');
+
+
+body{
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+   
+.content{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 1.5em 1em;
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    font-family: 'Libre Franklin', sans-serif;
+    border-radius: 10px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Coincheck</title>
+</head>
+<body>
+    <div class="content">
+        <div id="app">
+            <h1>Bitcoin Price Index</h1>
+
+        <section v-if="errored">
+            <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+        </section>
+
+        <section v-else>
+            <div v-if="loading">Loading...</div>
+
+            <div
+            v-else
+            v-for="(rate, currency) in info"
+            class="currency"
+            
+            >   
+            {{ currency }}:
+            <span class="lighten">
+                <span v-html="rate.symbol"></span>{{ rate.rate_float | currencydecimal }}
+            </span>
+            </div>
+
+        </section>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/main.js"></script>
+    
+</body>
+</html>
